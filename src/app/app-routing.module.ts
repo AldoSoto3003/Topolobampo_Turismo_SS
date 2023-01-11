@@ -1,10 +1,25 @@
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes =[
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home',component: LandingPageComponent },
+  // { path: 'user-profile',     component: ProfileComponent },
+  // { path: 'signup',           component: SignupComponent },
+  // { path: 'landing',          component: LandingComponent },
+  // { path: 'nucleoicons',      component: NucleoiconsComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes,{
+      useHash: true
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

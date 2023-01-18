@@ -25,15 +25,16 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/documentation"
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
               "src/assets/css/nucleo-icons.css",
-              "documentation/css/paper-kit.css"
+              "src/documentation/css/paper-kit.css"
             ],
             "scripts": []
           },

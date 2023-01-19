@@ -1,4 +1,5 @@
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';

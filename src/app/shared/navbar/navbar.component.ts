@@ -61,7 +61,6 @@ export class NavbarComponent implements OnInit {
     }
     isDocumentation() {
       var titlee = this.location.prepareExternalUrl(this.location.path());
-      console.log('El titlee es: ',titlee)
       if(titlee.charAt(0) === '#'){
           titlee = titlee.slice( 1 );
       }

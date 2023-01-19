@@ -2,8 +2,15 @@
 <div class="page-header" data-parallax="true" style="background-image: url('./assets/img/topoyork.jpeg');">
     <div class="filter"></div>
     <div class="container">
+           <div class="title-brand">
+                    <div class="angular-logo">
+                        <img src="assets/img/UAS-LOGO.png" alt="">
+                    </div>
+                    
+                </div>
+            
         <div class="motto text-center">
-            <h1>Puerto de topolobampo</h1>
+            <h1 class="h1">Puerto de topolobampo</h1>
             <h3></h3>
             <br />
             <a href="https://www.facebook.com/comunidadtopolobamposs/" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Ver trabajo del servicio social</a>
@@ -89,12 +96,12 @@
             <h1>Isla el Farallón</h1>
             <h3></h3>
             <br />
-            <!-- <button type="button" href="https://www.youtube.com/watch?v=L6VSU8XT044" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Conoce mas acerca de este atractivo turistico</button> -->
+            <app-video-modal2></app-video-modal2>
             <!-- <button type="button" class="btn btn-outline-neutral btn-round">Ver lu</button> -->
-            <a href="https://www.youtube.com/watch?v=L6VSU8XT044" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Conoce de este atractivo turistico</a>
         </div>
     </div>
 </div>
+
 
 <div class="page-header" data-parallax="true" style="background-image: url('./assets/img/maviri.jpg');">
     <div class="filter"></div>
@@ -103,7 +110,8 @@
             <h1>El maviri</h1>
             <h3></h3>
             <br />
-            <a href="https://www.youtube.com/watch?v=I3Dthntjc5c" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Conoce mas de este atractivo turistico</a>
+            <app-video-modal></app-video-modal>
+            <!-- <a href="https://www.youtube.com/watch?v=I3Dthntjc5c"  class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Conoce mas de este atractivo turistico</a> -->
             <!-- <button type="button" class="btn btn-outline-neutral btn-round">Ver lu</button> -->
         </div>
     </div>
@@ -190,20 +198,20 @@
     </div>
 </div> -->
 
-    <div class="section landing-section">
-        <div class="container">
-            <div class="row">
+    <div class="section landing-section" >
+        <div class="container" >
+            <div class="row" >
                 <div class="col-md-8 mr-auto ml-auto">
                     <h2 class="text-center">¿Podemos mejorar?</h2>
-                    <form class="contact-form">
+                    <form class="contact-form" >
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6" >
                                 <label>Nombre</label>
                                 <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
                                     <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                    <input [(ngModel)]='datosEmail.asunto' id="asunto" name="asunto" type="text" class="form-control" (focus)="focus=true" (blur)="focus=false">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -212,15 +220,15 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <input  [(ngModel)]='datosEmail.email' id="email" name="email" type="email" class="form-control" placeholder="email" (focus)="focus1=true" (blur)="focus1=false" >
                                 </div>
                             </div>
                         </div>
                         <label>¿En que podemos mejorar?</label>
-                        <textarea class="form-control" rows="4" placeholder="Tell us your thoughts and feelings..."></textarea>
+                        <textarea [(ngModel)]='datosEmail.mensaje' id="mensaje" name="mensaje" class="form-control" rows="4" ></textarea>
                         <div class="row">
                             <div class="col-md-4 mr-auto ml-auto">
-                                <button class="btn btn-danger btn-lg btn-fill">Mandar comentario</button>
+                                <button class="btn btn-danger btn-lg btn-fill" (click)="envioCorreo()">Mandar comentario</button>
                             </div>
                         </div>
                     </form>

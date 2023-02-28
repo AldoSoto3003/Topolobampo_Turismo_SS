@@ -15,7 +15,7 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
         src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fdebateguamuchil%2Fvideos%2F1125868474932559%2F&show_text=false&width=380&t=0" title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen = "true"></iframe>
+        allowfullscreen = "false"></iframe>
     </div>
     <div class="modal-footer">
 

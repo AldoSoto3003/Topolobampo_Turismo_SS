@@ -12,6 +12,7 @@ import { NgModule } from '@angular/core';
 import { VideoModalComponent } from './video-modal/video-modal.component';
 import { VideoModal2Component } from './video-modal2/video-modal2.component';
 import { VideoModal3Component } from './video-modal3/video-modal3component';
+import { VideoModal4Component } from './video-modal4/video-modal4.component';
 
 
 
@@ -21,7 +22,8 @@ import { VideoModal3Component } from './video-modal3/video-modal3component';
     FooterComponent,
     VideoModalComponent,
     VideoModal2Component,
-    VideoModal3Component
+    VideoModal3Component,
+    VideoModal4Component
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { VideoModal3Component } from './video-modal3/video-modal3component';
     FooterComponent,
     VideoModalComponent,
     VideoModal2Component,
-    VideoModal3Component
+    VideoModal3Component,
+    VideoModal4Component
   ]
 })
 export class SharedModule { }

@@ -3,7 +3,7 @@
         <div class="row" >
             <div class="col-md-8 mr-auto ml-auto">
                 <h2 class="text-center">¿Podemos mejorar?</h2>
-            <form class="contact-form" >
+            <form class="contact-form" [formGroup]="sendEmailForm"  (ngSubmit)="onSubmit(sendEmailForm)">
                 <div class="row">
 
                     <div class="col-md-6" >
@@ -51,7 +51,7 @@
                 </textarea>
                 <div class="row">
                     <div class="col-md-4 mr-auto ml-auto">
-                        <button class="btn btn-danger btn-lg btn-fill" (click)="envioCorreo()">Mandar comentario</button>
+                        <button class="btn btn-danger btn-lg btn-fill" type="submit">Mandar comentario</button>
                     </div>
                 </div>
             </form>

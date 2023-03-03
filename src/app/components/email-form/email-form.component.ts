@@ -11,16 +11,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./email-form.component.scss']
 })
 export class EmailFormComponent implements OnInit {
-
-  sendEmailForm = new FormGroup({
-    nombre: new FormControl(''),
-    email: new FormControl(''),
-    comentarios: new FormControl('')
-  });
+  sendEmailForm: FormGroup;
 
   focus: any;
   focus1: any;
-
   resp: resp
   url: string = 'https://email-server-node-js.vercel.app/envio';
 
@@ -29,14 +23,24 @@ export class EmailFormComponent implements OnInit {
     asunto:'',
     mensaje:''
   }
+  
+  
+  ngOnInit(): void {
+    this.sendEmailForm = new FormGroup({
+      nombre: new FormControl(''),
+      email: new FormControl(''),
+      comentarios: new FormControl('')
+    });
+  }
 
 
   constructor(private _httpClient: HttpClient) { 
     
   }
 
+  onSubmit(form:FormGroup){
+    console.log(form.valid)
 
-  ngOnInit(): void {
   }
 
   envioCorreo(){

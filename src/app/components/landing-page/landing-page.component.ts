@@ -40,7 +40,7 @@ export class LandingPageComponent implements OnInit {
       mensaje: this.datosEmail.mensaje + this.datosEmail.email
     };
 
-    if((params.asunto == "") && (params.mensaje="")){
+    if((params.asunto == "") || (params.mensaje="")){
       this.showModalenvioFallido();
     }else{
       this._httpClient.post(this.url,params).subscribe(resp=>{

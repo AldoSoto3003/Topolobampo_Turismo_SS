@@ -7,12 +7,17 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import {HttpClientModule} from '@angular/common/http'
 
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RouterModule } from '@angular/router';
+import { EmailFormComponent } from './email-form/email-form.component';
+import { PerfilesComponent } from './perfiles/perfiles.component';
 
 
 
 @NgModule({
+  declarations: [
+    EmailFormComponent,
+    PerfilesComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -25,11 +30,9 @@ import { RouterModule } from '@angular/router';
 
     SharedModule
   ],
-  declarations: [
-    LandingPageComponent,
-  ],
   exports:[
-    LandingPageComponent,
+    EmailFormComponent,
+    PerfilesComponent
   ]
 })
 export class ComponentsModule { }

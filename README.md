@@ -1,27 +1,7 @@
-# TopolobampoPageNew
+# PROYECTO SERVICIO SOCIAL UAS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+## Introducción:
+    Como brigadistas del servicio social de topolobmapo, sirviendo a la comunidad del puerto de topolobampo, nos percatamos que topolobampo tiene mas que un simple malecón, es un puerto con bellos atractivos turisticos que la mayoria de personas, me incluyo, desconocemos, lo que resulta en poco turismo y un flujo economico para los habitantes de Topolobampo que se dedican al turismo, como los lancheros por poner un ejemplo.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Objetivo:
+    Crear una platafoma web, donde podamos centralizar todos estos puntos turisticos, rescatados con encuestas a la población, de esta manera darles publicidad y poder crear un medio informativo confiable.

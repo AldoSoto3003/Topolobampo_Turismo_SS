@@ -12,6 +12,8 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
@@ -21,14 +23,7 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    ComponentsModule,
-
-    BrowserModule,
     FormsModule,
-    RouterModule,
-
-    AppRoutingModule,
     NgbModule,
     CommonModule,
     FormsModule,
@@ -37,6 +32,12 @@ import { ComponentsModule } from './components/components.module';
     NouisliderModule,
     RouterModule,
     JwBootstrapSwitchNg2Module,
+    RouterModule,
+    AppRoutingModule,
+    BrowserModule,
+    
+    PagesModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -8,11 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes =[
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',component: LandingPageComponent },
-  // { path: 'user-profile',     component: ProfileComponent },
-  // { path: 'signup',           component: SignupComponent },
-  // { path: 'landing',          component: LandingComponent },
-  // { path: 'nucleoicons',      component: NucleoiconsComponent }
-];
+]
 
 @NgModule({
   imports: [

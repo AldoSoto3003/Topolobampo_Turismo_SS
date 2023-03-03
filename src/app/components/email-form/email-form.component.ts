@@ -1,19 +1,19 @@
-
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { emailInterface } from 'src/app/interfaces/email.interface';
-import { resp } from '../../interfaces/resp.interface';
+import { resp } from 'src/app/interfaces/resp.interface';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss'],
+  selector: 'app-email-form',
+  templateUrl: './email-form.component.html',
+  styleUrls: ['./email-form.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class EmailFormComponent implements OnInit {
   focus: any;
   focus1: any;
+
   datos: FormGroup;
 
   url: string = 'https://email-server-node-js.vercel.app/envio';
@@ -72,6 +72,5 @@ export class LandingPageComponent implements OnInit {
       background: "#f2eee3",
     })
   }
+
 }
-
-

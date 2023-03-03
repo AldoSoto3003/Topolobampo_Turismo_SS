@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { emailInterface } from 'src/app/interfaces/email.interface';
 import { resp } from 'src/app/interfaces/resp.interface';
 import Swal from 'sweetalert2';
@@ -11,11 +11,17 @@ import Swal from 'sweetalert2';
   styleUrls: ['./email-form.component.scss']
 })
 export class EmailFormComponent implements OnInit {
+
+  sendEmailForm = new FormGroup({
+    nombre: new FormControl(''),
+    email: new FormControl(''),
+    comentarios: new FormControl('')
+  });
+
   focus: any;
   focus1: any;
 
-  datos: FormGroup;
-
+  resp: resp
   url: string = 'https://email-server-node-js.vercel.app/envio';
 
   datosEmail: emailInterface = {
@@ -24,11 +30,11 @@ export class EmailFormComponent implements OnInit {
     mensaje:''
   }
 
-  resp: resp
 
   constructor(private _httpClient: HttpClient) { 
     
   }
+
 
   ngOnInit(): void {
   }
